@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+
+}
+
+body {
+    background-color: #0D0D0D;
+    color: #f9f6f6;
+    overflow: visible;
+}
+
+#search {
+    display: block;
+    padding-top: 15px;
+    transition: all 0.5s;
+    border: 2px solid #F8F6F6;
+}
+
+.logo {
+    width: 30px;
+}
+
+.side-nav-menu {
+    z-index: 999;
+
+
+}
+
+#toggle {
+    font-weight: 900;
+    font-size: 35px;
+}
+
+#sidnav {
+    background-color: #0D0D0D;
+    width: 300px;
+
+}
+
+#menu {
+    margin: 0;
+    padding-top: 0;
+    overflow: hidden;
+    height: 300px;
+}
+
+#menu li a {
+    color: #f9f6f6;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+
+}
+
+#menu li a:hover {
+    color: #ff655c !important;
+}
+
+.copyrights {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+}
+
+.copyrights p {
+    color: rgb(153, 153, 153) !important;
+}
+
+.rights-social a {
+    color: #f9f6f6;
+    padding-left: 15px;
+    font-size: 14px;
+}
+
+/*========================= Contact Section ========================*/
+#contact .form-control {
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    border-color: #CED4DA;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    color: #fff;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+#contact .form-control::placeholder {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: none;
+}
+
+.form-btn {
+    background-color: var(--main-color);
+    color: #fff !important;
+    padding: 10px 25px;
+    transition: all 0.2s ease-in-out;
+    border: none;
+}
+
+.form-btn:hover {
+    color: #000 !important;
+    background-color: #F8F6F6;
+}
+
+.showPass {
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    bottom: -20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.error-message {
+    color: red; /* Error message text color */
+    font-size: 14px; /* Error message font size */
+    margin-top: 5px; /* Margin from the top */
+    display: none; /* Initially hide the error message */
+}
+/* CSS for overlay layer */
+.container {
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.overlay {
+    text-align: center;
+}
+
+.position-relative:hover .overlay {
+    opacity: 0.9;
+}
+
+.overlay h2, .overlay p {
+    margin: 0;
+}
+
+.overlay h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.overlay p {
+    font-size: 15px;
+}
+
+.overlay .rate {
+    font-size: 15px;
+    margin-top: 10px;
+    white-space: nowrap;
+}
+
+/* Additional styling for overlay content */
+.overlay h2:first-of-type {
+    margin-bottom: 5px;
+}
+
+.overlay p:last-of-type {
+    margin-top: 5px;
+}
+
+/* Rotate image in Y-axis */
+.position-relative:hover img {
+    transform: scale(1.1); /* Adjust scale factor as needed */
+    transition: transform 0.3s ease;
+    
+}
+
+
+/* Additional styling for overlay content */
+.overlay h2:first-of-type {
+    margin-bottom: 5px;
+}
+
+.overlay p:last-of-type {
+    margin-top: 5px;
+}
+.overlay .vote
+{
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid green;
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+/* Define keyframe animation for overlay content */
+@keyframes slideFromTopLeft {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.overlay .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the content */
+    animation: slideFromTopLeft 0.5s ease forwards; /* Apply the animation */
+}
+/* Additional styles for animation */
+.overlay.show .overlay-content h2, .overlay.show .overlay-content p {
+    animation-delay: 0.2s; /* Add delay for animation */
+    animation-duration: 0.5s; /* Adjust animation duration */
+    animation-fill-mode: forwards; /* Keep the final state of animation */
+}
+
+.overlay.show .overlay-content .rate {
+    animation-delay: 0.4s; /* Add delay for rating animation */
+    animation-duration: 0.5s; /* Adjust animation duration */
+    animation-fill-mode: forwards; /* Keep the final state of animation */
+}
+
+/* Adjust any other styles as needed */
